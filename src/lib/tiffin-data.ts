@@ -184,7 +184,7 @@ export function allocate(dropped: Cook, orders: Order[], extra: Record<string, n
     const s = sub(o);
     const pool = eligibleBackups(dropped, s.diet, used).filter((c) => remaining(c, used) > 0);
     if (pool.length) {
-      const c = pool[0];
+      const c = pool[0]!;
       used[c.id] = (used[c.id] ?? 0) + 1;
       result.push({ orderId: o.id, backupCookId: c.id, reason: `${s.diet} match · ${dropped.city}` });
     } else {
