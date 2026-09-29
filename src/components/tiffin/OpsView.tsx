@@ -288,7 +288,7 @@ export function OpsView({ city, extra, setExtra, resolutions, setResolutions, au
             {cook && allocs?.map((a) => {
               const o = orders.find((x) => x.id === a.orderId)!;
               const s = sub(o);
-              const first = s.name.split(" ")[0];
+              const first = s.name.split(" ")[0] ?? s.name;
               const b = a.backupCookId ? cookById(a.backupCookId) : null;
               const phrase = incident?.reasonPhrase ?? "unavailable";
               const msg = b
