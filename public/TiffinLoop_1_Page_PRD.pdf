@@ -19,65 +19,73 @@ endobj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
 endobj
 7 0 obj
-<< /Length 12712 >>
+<< /Length 14107 >>
 stream
 q
 BT
-/F2 13 Tf
+/F2 15 Tf
 0.07 0.11 0.18 rg
-1 0 0 1 25.00 807.89 Tm
-(TIFFINLOOP — DISPATCH RECOVERY SYSTEM) Tj
+1 0 0 1 26.00 803.89 Tm
+(TIFFINLOOP) Tj
 ET
 Q
 q
 BT
-/F2 7.5 Tf
-0.2 0.4 0.8 rg
-1 0 0 1 452.83 809.89 Tm
-(Production v1.0 Specification) Tj
+/F1 9 Tf
+0.35 0.4 0.5 rg
+1 0 0 1 121.00 804.89 Tm
+(Product Requirements Document \(PRD\)) Tj
 ET
 Q
 q
 BT
-/F1 7.5 Tf
-0.3 0.35 0.45 rg
-1 0 0 1 25.00 796.39 Tm
-(Operational Blueprint: Resolving Morning Cook No-Shows Under a 2-Hour Delivery Cutoff \(Bengaluru, Mumbai, Pune\)) Tj
+/F2 8 Tf
+0.2 0.35 0.65 rg
+1 0 0 1 461.28 804.89 Tm
+(Bengaluru · Mumbai · Pune) Tj
+ET
+Q
+q
+BT
+/F2 8.5 Tf
+0.15 0.2 0.28 rg
+1 0 0 1 26.00 790.89 Tm
+(Operations Recovery Engine: Resolving Morning Cook Dropouts Under a 2-Hour Delivery Cutoff) Tj
 ET
 Q
 q
 1.25 w
 0.15 0.2 0.3 RG
-25.00 791.89 m
-570.28 791.89 l
+26.00 785.89 m
+569.28 785.89 l
 S
 Q
 q
 0.5 w
 0.82 0.86 0.91 RG
 0.95 0.97 0.99 rg
-25.00 771.39 545.28 13.50 re
+26.00 763.89 543.28 14.00 re
 B
 Q
 q
 1 w
 0.12 0.35 0.85 rg
-25.00 771.39 3.50 13.50 re
+26.00 763.89 3.50 14.00 re
 f
 Q
 q
 BT
-/F2 7.5 Tf
+/F2 7.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 33.00 774.89 Tm
-(1. THE PROBLEM: MORNING COOK NO-SHOWS UNDER A 2-HOUR DELIVERY CLIFF) Tj
+1 0 0 1 34.00 767.89 Tm
+(1. GROUND REALITY: MORNING COOK DROPOUTS UNDER A 2-HOUR DELIVERY CLIFF) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 761.89 Tm
+1 0 0 1 29.00 754.39 Tm
 (•) Tj
 ET
 Q
@@ -85,23 +93,39 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 761.89 Tm
+1 0 0 1 37.00 754.39 Tm
 (The 10:30 AM Crunch: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 115.80 761.89 Tm
-(Home cooks prepare fresh dal, sabzi, and chapatis from scratch. When a cook drops out at 10:30 AM, nearby kitchens need 90 minutes of active prep before 12:15 PM delivery pickup. Ops has less than 15 minutes to reassign meals before lunch is physically unfulfillable.) Tj
+1 0 0 1 117.85 754.39 Tm
+(Home cooks prepare dal, sabzi, and fresh chapatis from scratch. When a cook drops out at 10:30 AM,) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 744.89 Tm
+(backup kitchens require 90 minutes of active cooking before 12:15 PM delivery pickup. Ops has less than 15 minutes to) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 735.39 Tm
+(reassign meals before lunch is physically unfulfillable.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 751.39 Tm
+1 0 0 1 29.00 723.89 Tm
 (•) Tj
 ET
 Q
@@ -109,23 +133,39 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 751.39 Tm
+1 0 0 1 37.00 723.89 Tm
 (The Unlogged WhatsApp Trap: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 142.40 751.39 Tm
-(Cooks rarely update central spreadsheets. When Sunita Kulkarni \(CK090\) texted "Bhaiya aaj nahi ho payega" at 7:41 AM, ops got distracted in morning standup. The sheet remained "Active", and 6 Mumbai subscribers were left facing surprise hunger without notice.) Tj
+1 0 0 1 144.80 723.89 Tm
+(Cooks rarely update central spreadsheets. When Sunita Kulkarni \(CK090\) texted "Bhaiya aaj) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 714.39 Tm
+(nahi ho payega" at 7:41 AM, ops got distracted in morning standup. The sheet remained "Active", and 6 Mumbai subscribers) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 704.89 Tm
+(were left facing surprise hunger without notice.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 740.89 Tm
+1 0 0 1 29.00 693.39 Tm
 (•) Tj
 ET
 Q
@@ -133,44 +173,60 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 740.89 Tm
+1 0 0 1 37.00 693.39 Tm
 (The Jain Bottleneck Cascade: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 146.20 740.89 Tm
-(Sequential manual matching causes severe allocation bias. An operator reassigning an early vegetarian order to Ayesha Gupta unknowingly burns her rare Jain-certified slot. Thirty minutes later, when a strict Jain customer arrives, no certified kitchen has capacity left.) Tj
+1 0 0 1 148.65 693.39 Tm
+(Sequential manual matching causes severe allocation bias. An operator reassigning an early) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 683.89 Tm
+(vegetarian order to Ayesha Gupta unknowingly burns her rare Jain-certified slot. Thirty minutes later, when a strict) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 674.39 Tm
+(Jain customer arrives, no certified kitchen has capacity left.) Tj
 ET
 Q
 q
 0.5 w
 0.82 0.86 0.91 RG
 0.95 0.97 0.99 rg
-25.00 721.89 545.28 13.50 re
+26.00 653.89 543.28 14.00 re
 B
 Q
 q
 1 w
 0.12 0.35 0.85 rg
-25.00 721.89 3.50 13.50 re
+26.00 653.89 3.50 14.00 re
 f
 Q
 q
 BT
-/F2 7.5 Tf
+/F2 7.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 33.00 725.39 Tm
-(2. TARGET USERS & OPERATIONAL SCENARIOS) Tj
+1 0 0 1 34.00 657.89 Tm
+(2. TARGET PERSONAS & DAILY OPERATIONAL PRESSURES) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 712.39 Tm
+1 0 0 1 29.00 644.39 Tm
 (•) Tj
 ET
 Q
@@ -178,23 +234,31 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 712.39 Tm
-(City Operations Managers \(Priya / Rahul\): ) Tj
+1 0 0 1 37.00 644.39 Tm
+(City Operations Managers: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 195.60 712.39 Tm
-(Managing daily dispatch across 500+ subscribers and 92 cooks. They operate under intense morning cognitive overload and need to resolve concurrent cook dropouts within 8 minutes with zero manual calculation errors.) Tj
+1 0 0 1 137.10 644.39 Tm
+(Managing daily dispatch across 500+ subscribers and 92 cooks. They operate under intense) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 634.89 Tm
+(morning time pressure and need to resolve concurrent cook dropouts within 8 minutes with zero manual calculation errors.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 701.89 Tm
+1 0 0 1 29.00 623.39 Tm
 (•) Tj
 ET
 Q
@@ -202,51 +266,67 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 701.89 Tm
-(City Business Heads \(VP of Ops\): ) Tj
+1 0 0 1 37.00 623.39 Tm
+(City Business Heads \(VP Ops\): ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 161.40 701.89 Tm
-(Responsible for city margins and subscriber retention. They require 30-day visibility into repeat-offender cooks, chronic kitchen capacity deficits, and refund burn to restructure cook contracts and prevent churn before it happens.) Tj
+1 0 0 1 152.50 623.39 Tm
+(Responsible for city unit economics and subscriber retention. They require 30-day) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 613.89 Tm
+(visibility into repeat-offender cooks, chronic kitchen capacity deficits, and refund burn to restructure cook contracts) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 604.39 Tm
+(and prevent churn before it happens.) Tj
 ET
 Q
 q
 0.5 w
 0.82 0.86 0.91 RG
 0.95 0.97 0.99 rg
-25.00 682.89 545.28 13.50 re
+26.00 583.89 543.28 14.00 re
 B
 Q
 q
 1 w
 0.12 0.35 0.85 rg
-25.00 682.89 3.50 13.50 re
+26.00 583.89 3.50 14.00 re
 f
 Q
 q
 BT
-/F2 7.5 Tf
+/F2 7.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 33.00 686.39 Tm
-(3. MEASURABLE SUCCESS TARGETS \(GROUNDED IN 7,138 ORDER HISTORY\)) Tj
+1 0 0 1 34.00 587.89 Tm
+(3. MEASURABLE PRODUCTION GOALS \(GROUNDED IN 7,138 ORDER HISTORY\)) Tj
 ET
 Q
 q
 0.5 w
 0.78 0.82 0.88 RG
 0.92 0.94 0.98 rg
-25.00 668.39 545.28 12.00 re
+26.00 568.89 543.28 12.50 re
 B
 Q
 q
 BT
 /F2 6.75 Tf
 0.1 0.14 0.22 rg
-1 0 0 1 29.00 671.89 Tm
+1 0 0 1 31.00 572.89 Tm
 (Goal Dimension) Tj
 ET
 Q
@@ -254,7 +334,7 @@ q
 BT
 /F2 6.75 Tf
 0.1 0.14 0.22 rg
-1 0 0 1 134.00 671.89 Tm
+1 0 0 1 141.00 572.89 Tm
 (Specific Metric & Operational Formula) Tj
 ET
 Q
@@ -262,7 +342,7 @@ q
 BT
 /F2 6.75 Tf
 0.1 0.14 0.22 rg
-1 0 0 1 374.00 671.89 Tm
+1 0 0 1 376.00 572.89 Tm
 (Current Baseline) Tj
 ET
 Q
@@ -270,7 +350,7 @@ q
 BT
 /F2 6.75 Tf
 0.1 0.14 0.22 rg
-1 0 0 1 469.00 671.89 Tm
+1 0 0 1 471.00 572.89 Tm
 (Target SLA \(v1.0\)) Tj
 ET
 Q
@@ -278,30 +358,30 @@ q
 0.5 w
 0.84 0.87 0.91 RG
 1 1 1 rg
-25.00 656.89 545.28 11.50 re
+26.00 556.89 543.28 12.00 re
 B
 Q
 q
 BT
 /F2 6.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 29.00 660.39 Tm
+1 0 0 1 31.00 560.89 Tm
 (North Star Outcome) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 134.00 660.39 Tm
+1 0 0 1 141.00 560.89 Tm
 (Meal Recovery Rate = \(Reassigned Meals Delivered / Total Impacted Orders\) * 100) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.38 0.42 0.48 rg
-1 0 0 1 374.00 660.39 Tm
+1 0 0 1 376.00 560.89 Tm
 (71.4% \(Unmanaged\)) Tj
 ET
 Q
@@ -309,7 +389,7 @@ q
 BT
 /F2 6.75 Tf
 0.08 0.55 0.22 rg
-1 0 0 1 469.00 660.39 Tm
+1 0 0 1 471.00 560.89 Tm
 (>= 88.0% rescued) Tj
 ET
 Q
@@ -317,30 +397,30 @@ q
 0.5 w
 0.84 0.87 0.91 RG
 0.98 0.99 1 rg
-25.00 645.39 545.28 11.50 re
+26.00 544.89 543.28 12.00 re
 B
 Q
 q
 BT
 /F2 6.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 29.00 648.89 Tm
+1 0 0 1 31.00 548.89 Tm
 (Resolution Velocity) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 134.00 648.89 Tm
+1 0 0 1 141.00 548.89 Tm
 (Time-to-Resolution \(TTR\): Signal detection to batch notification dispatch) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.38 0.42 0.48 rg
-1 0 0 1 374.00 648.89 Tm
+1 0 0 1 376.00 548.89 Tm
 (42 mins \(Phone/Sheet\)) Tj
 ET
 Q
@@ -348,7 +428,7 @@ q
 BT
 /F2 6.75 Tf
 0.08 0.55 0.22 rg
-1 0 0 1 469.00 648.89 Tm
+1 0 0 1 471.00 548.89 Tm
 (<= 8 mins \(Done by 10:45 AM\)) Tj
 ET
 Q
@@ -356,30 +436,30 @@ q
 0.5 w
 0.84 0.87 0.91 RG
 1 1 1 rg
-25.00 633.89 545.28 11.50 re
+26.00 532.89 543.28 12.00 re
 B
 Q
 q
 BT
 /F2 6.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 29.00 637.39 Tm
+1 0 0 1 31.00 536.89 Tm
 (Dietary Safety) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 134.00 637.39 Tm
+1 0 0 1 141.00 536.89 Tm
 (Religious/Allergy Compliance: 0 tolerance for unverified Jain kitchen matching) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.38 0.42 0.48 rg
-1 0 0 1 374.00 637.39 Tm
+1 0 0 1 376.00 536.89 Tm
 (3.2% Cross-contamination risk) Tj
 ET
 Q
@@ -387,7 +467,7 @@ q
 BT
 /F2 6.75 Tf
 0.08 0.55 0.22 rg
-1 0 0 1 469.00 637.39 Tm
+1 0 0 1 471.00 536.89 Tm
 (0.0% \(Hard Gate\)) Tj
 ET
 Q
@@ -395,30 +475,30 @@ q
 0.5 w
 0.84 0.87 0.91 RG
 0.98 0.99 1 rg
-25.00 622.39 545.28 11.50 re
+26.00 520.89 543.28 12.00 re
 B
 Q
 q
 BT
 /F2 6.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 29.00 625.89 Tm
+1 0 0 1 31.00 524.89 Tm
 (Financial Guardrail) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 134.00 625.89 Tm
+1 0 0 1 141.00 524.89 Tm
 (Monthly Net Refund Burn: Cash refunds paid out due to cook cancellations) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.38 0.42 0.48 rg
-1 0 0 1 374.00 625.89 Tm
+1 0 0 1 376.00 524.89 Tm
 (Rs 21,480 / month) Tj
 ET
 Q
@@ -426,7 +506,7 @@ q
 BT
 /F2 6.75 Tf
 0.08 0.55 0.22 rg
-1 0 0 1 469.00 625.89 Tm
+1 0 0 1 471.00 524.89 Tm
 (<= Rs 12,000 / month \(-44%\)) Tj
 ET
 Q
@@ -434,30 +514,30 @@ q
 0.5 w
 0.84 0.87 0.91 RG
 1 1 1 rg
-25.00 610.89 545.28 11.50 re
+26.00 508.89 543.28 12.00 re
 B
 Q
 q
 BT
 /F2 6.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 29.00 614.39 Tm
+1 0 0 1 31.00 512.89 Tm
 (Subscriber Retention) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 134.00 614.39 Tm
+1 0 0 1 141.00 512.89 Tm
 (14-Day Post-Incident Churn: Subscribers cancelling after experiencing a no-show) Tj
 ET
 Q
 q
 BT
-/F1 6.5 Tf
+/F1 6.4 Tf
 0.38 0.42 0.48 rg
-1 0 0 1 374.00 614.39 Tm
+1 0 0 1 376.00 512.89 Tm
 (28.5% Churn on unserved) Tj
 ET
 Q
@@ -465,7 +545,7 @@ q
 BT
 /F2 6.75 Tf
 0.08 0.55 0.22 rg
-1 0 0 1 469.00 614.39 Tm
+1 0 0 1 471.00 512.89 Tm
 (<= 6.0% for rescued orders) Tj
 ET
 Q
@@ -473,28 +553,28 @@ q
 0.5 w
 0.82 0.86 0.91 RG
 0.95 0.97 0.99 rg
-25.00 593.39 545.28 13.50 re
+26.00 489.89 543.28 14.00 re
 B
 Q
 q
 1 w
 0.12 0.35 0.85 rg
-25.00 593.39 3.50 13.50 re
+26.00 489.89 3.50 14.00 re
 f
 Q
 q
 BT
-/F2 7.5 Tf
+/F2 7.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 33.00 596.89 Tm
-(4. WHAT OUR PROTOTYPE PROVED \(LIVE TESTING WITH SEED DATA\)) Tj
+1 0 0 1 34.00 493.89 Tm
+(4. WHAT THE PROTOTYPE PROVED \(LIVE TESTING WITH SEED DATA\)) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 583.89 Tm
+1 0 0 1 29.00 480.39 Tm
 (•) Tj
 ET
 Q
@@ -502,23 +582,31 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 583.89 Tm
+1 0 0 1 37.00 480.39 Tm
 (Unstructured WhatsApp Signals Capture Reality: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 214.60 583.89 Tm
-(Directly caught Sunita Kulkarni \(CK090\) via conversational Hinglish parsing, rescuing 6 meals in Mumbai that the operational spreadsheet missed entirely.) Tj
+1 0 0 1 217.95 480.39 Tm
+(Directly caught Sunita Kulkarni \(CK090\) via conversational Hinglish) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 470.89 Tm
+(parsing, rescuing 6 meals in Mumbai that the operational spreadsheet missed entirely.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 573.89 Tm
+1 0 0 1 29.00 459.39 Tm
 (•) Tj
 ET
 Q
@@ -526,23 +614,31 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 573.89 Tm
+1 0 0 1 37.00 459.39 Tm
 (Global Batch Allocation Solves the Jain Bottleneck: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 233.60 573.89 Tm
-(Solving all 24 morning orders simultaneously \(Jain first -> Non-Veg -> Veg\) recovered 5 additional meals compared to greedy sequential assignment.) Tj
+1 0 0 1 237.20 459.39 Tm
+(Solving all 24 morning orders simultaneously \(Jain first -> Non-Veg) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 449.89 Tm
+(-> Veg\) recovered 5 additional meals compared to greedy sequential assignment.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 563.89 Tm
+1 0 0 1 29.00 438.39 Tm
 (•) Tj
 ET
 Q
@@ -550,23 +646,31 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 563.89 Tm
+1 0 0 1 37.00 438.39 Tm
 (Explainable Match Scoring Eliminates Operator Hesitation: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 256.40 563.89 Tm
-(Displaying transparent criteria \("Bengaluru match | Jain certified kitchen | 12 spare slots | South Indian preference"\) cut operator review time to under 10 seconds.) Tj
+1 0 0 1 260.30 438.39 Tm
+(Displaying transparent criteria \("Bengaluru match | Jain) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 428.89 Tm
+(certified kitchen | 12 spare slots | South Indian preference"\) cut operator review time to under 10 seconds.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 553.89 Tm
+1 0 0 1 29.00 417.39 Tm
 (•) Tj
 ET
 Q
@@ -574,153 +678,209 @@ q
 BT
 /F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 553.89 Tm
+1 0 0 1 37.00 417.39 Tm
 (Hard Kitchen Capacity Bounds Prevent Disaster: ) Tj
 ET
 Q
 q
 BT
-/F1 7.2 Tf
+/F1 7.15 Tf
 0.16 0.2 0.26 rg
-1 0 0 1 214.60 553.89 Tm
-(Strictly respecting max_daily_orders prevented kitchen overloads, gracefully routing excess orders into automated UPI refunds + Rs 50 compensation.) Tj
+1 0 0 1 217.95 417.39 Tm
+(Strictly respecting max_daily_orders prevented kitchen overloads,) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 407.89 Tm
+(gracefully routing excess orders into automated UPI refunds + Rs 50 compensation.) Tj
 ET
 Q
 q
 0.5 w
 0.82 0.86 0.91 RG
 0.95 0.97 0.99 rg
-25.00 535.39 545.28 13.50 re
+26.00 387.39 543.28 14.00 re
 B
 Q
 q
 1 w
 0.12 0.35 0.85 rg
-25.00 535.39 3.50 13.50 re
+26.00 387.39 3.50 14.00 re
 f
 Q
 q
 BT
-/F2 7.5 Tf
+/F2 7.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 33.00 538.89 Tm
+1 0 0 1 34.00 391.39 Tm
 (5. DELIBERATE PRODUCT CUTS & ARCHITECTURAL TRADE-OFFS) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
-0.75 0.15 0.15 rg
-1 0 0 1 28.00 525.89 Tm
+0.12 0.35 0.85 rg
+1 0 0 1 29.00 377.89 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 525.89 Tm
+1 0 0 1 37.00 377.89 Tm
 (No Two-Way Cook Negotiation Calls: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 165.50 525.89 Tm
-(Calling cooks to ask "Can you take 4 more meals?" takes 25 minutes. In a 120-min window, this guarantees late delivery. Cut in favor of an opt-out standby agreement where cooks commit to absorb orders up to max_daily_orders.) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 171.75 377.89 Tm
+(Calling cooks to ask "Can you take 4 more meals?" takes 25 minutes. In a 120-min) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 368.39 Tm
+(window, this guarantees late delivery. Cut in favor of an opt-out standby agreement where cooks commit to absorb orders) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 358.89 Tm
+(up to max_daily_orders.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
-0.75 0.15 0.15 rg
-1 0 0 1 28.00 515.64 Tm
+0.12 0.35 0.85 rg
+1 0 0 1 29.00 347.39 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 515.64 Tm
+1 0 0 1 37.00 347.39 Tm
 (No Subscriber Meal Choice Approvals: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 172.90 515.64 Tm
-(Waiting for working professionals to approve substitute dishes during morning meetings takes >45 mins. Cut in favor of deterministic exact-diet auto-reassignment with instant proactive compensation credits.) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 179.45 347.39 Tm
+(Waiting for working professionals to approve substitute dishes during morning) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 337.89 Tm
+(meetings takes >45 mins. Cut in favor of deterministic exact-diet auto-reassignment with instant proactive compensation) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 328.39 Tm
+(credits.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
-0.75 0.15 0.15 rg
-1 0 0 1 28.00 505.39 Tm
+0.12 0.35 0.85 rg
+1 0 0 1 29.00 316.89 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 505.39 Tm
+1 0 0 1 37.00 316.89 Tm
 (No Dynamic Surge Bidding: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 132.20 505.39 Tm
-(Surge pricing auctions encourage cooks to delay their availability to capture peak bonuses. Cut in favor of a predictable flat emergency bonus \(+Rs 25/box\) to protect supply trust and unit economics.) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 137.10 316.89 Tm
+(Surge pricing auctions encourage cooks to delay their availability to capture peak bonuses.) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 307.39 Tm
+(Cut in favor of a predictable flat emergency bonus \(+Rs 25/box\) to protect supply trust and unit economics.) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
-0.75 0.15 0.15 rg
-1 0 0 1 28.00 495.14 Tm
+0.12 0.35 0.85 rg
+1 0 0 1 29.00 295.89 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 495.14 Tm
+1 0 0 1 37.00 295.89 Tm
 (No Autonomous Zero-Click Execution: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 169.20 495.14 Tm
-(Unverified WhatsApp texts contain sarcasm, retractions, and family members chatting. Cut full autonomy in favor of a 1-click human verification gate, preventing disastrous false cancellations.) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 175.60 295.89 Tm
+(Unverified WhatsApp texts contain sarcasm, retractions, and family members chatting.) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 286.39 Tm
+(Cut full autonomy in favor of a 1-click human verification gate, preventing disastrous false cancellations.) Tj
 ET
 Q
 q
 0.5 w
 0.82 0.86 0.91 RG
 0.95 0.97 0.99 rg
-25.00 476.39 545.28 13.50 re
+26.00 265.89 543.28 14.00 re
 B
 Q
 q
 1 w
 0.12 0.35 0.85 rg
-25.00 476.39 3.50 13.50 re
+26.00 265.89 3.50 14.00 re
 f
 Q
 q
 BT
-/F2 7.5 Tf
+/F2 7.75 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 33.00 479.89 Tm
+1 0 0 1 34.00 269.89 Tm
 (6. OPEN ENGINEERING QUESTIONS BEFORE PRODUCTION BUILD) Tj
 ET
 Q
@@ -728,119 +888,136 @@ q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 466.89 Tm
+1 0 0 1 29.00 256.39 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 466.89 Tm
+1 0 0 1 37.00 256.39 Tm
 (Concurrent Allocation Locking: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 150.70 466.89 Tm
-(When two ops managers handle Bengaluru dropouts simultaneously, how do we implement row-level capacity locking \(Redis mutex vs Postgres SELECT FOR UPDATE\) to prevent double-booking a cook's remaining slots?) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 156.35 256.39 Tm
+(When two ops managers handle Bengaluru dropouts simultaneously, how do we implement) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 246.89 Tm
+(row-level capacity locking \(Redis mutex vs Postgres SELECT FOR UPDATE\) to prevent double-booking a cook's remaining) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 237.39 Tm
+(slots?) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 456.64 Tm
+1 0 0 1 29.00 225.89 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 456.64 Tm
+1 0 0 1 37.00 225.89 Tm
 (Kitchen Certification Standard: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 154.40 456.64 Tm
-(What physical audit elevates a cook from "self-declared Jain" to "verified separate Jain kitchen" to eliminate religious liability under consumer safety standards?) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 160.20 225.89 Tm
+(What physical audit elevates a cook from "self-declared Jain" to "verified separate Jain) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 216.39 Tm
+(kitchen" to eliminate religious liability under consumer safety standards?) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 446.39 Tm
+1 0 0 1 29.00 204.89 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 446.39 Tm
+1 0 0 1 37.00 204.89 Tm
 (Cook Response Fallback Timer: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 147.00 446.39 Tm
-(If an assigned backup cook does not acknowledge dispatch via WhatsApp within 12 minutes, what automated escalation triggers to re-route orders to standby cloud kitchens?) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 152.50 204.89 Tm
+(If an assigned backup cook does not acknowledge dispatch via WhatsApp within 12 minutes,) Tj
+ET
+Q
+q
+BT
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 195.39 Tm
+(what automated escalation triggers to re-route orders to standby cloud kitchens?) Tj
 ET
 Q
 q
 BT
 /F2 7 Tf
 0.12 0.35 0.85 rg
-1 0 0 1 28.00 436.14 Tm
+1 0 0 1 29.00 183.89 Tm
 (•) Tj
 ET
 Q
 q
 BT
-/F2 7.1 Tf
+/F2 7.25 Tf
 0.08 0.12 0.2 rg
-1 0 0 1 36.00 436.14 Tm
+1 0 0 1 37.00 183.89 Tm
 (Meta WhatsApp Template Approvals: ) Tj
 ET
 Q
 q
 BT
-/F1 6.9 Tf
-0.18 0.22 0.28 rg
-1 0 0 1 161.80 436.14 Tm
-(Are pre-approved HSM utility message templates active for dynamic customer refund amounts, substitute cook names, and live dispatch tracking links?) Tj
-ET
-Q
-q
-0.75 w
-0.85 0.88 0.92 RG
-25.00 17.89 m
-570.28 17.89 l
-S
-Q
-q
-BT
-/F1 6.75 Tf
-0.45 0.5 0.55 rg
-1 0 0 1 25.00 8.89 Tm
-(TiffinLoop Operations & Engineering Architecture  |  Incident Recovery Engine Specification) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 167.90 183.89 Tm
+(Are pre-approved HSM utility message templates active for dynamic customer refund) Tj
 ET
 Q
 q
 BT
-/F2 6.75 Tf
-0.12 0.35 0.85 rg
-1 0 0 1 490.09 8.89 Tm
-(Strict 1-Page Document) Tj
+/F1 7.15 Tf
+0.16 0.2 0.26 rg
+1 0 0 1 37.00 174.39 Tm
+(amounts, substitute cook names, and live dispatch tracking links?) Tj
 ET
 Q
 
@@ -859,5 +1036,5 @@ xref
 trailer
 << /Size 8 /Root 1 0 R >>
 startxref
-13265
+14660
 %%EOF
