@@ -19,6 +19,8 @@ export interface Cook {
   phone: string;
   status?: string;
   statusSince?: string | null;
+  reliabilityScore?: number;
+  repeatDropouts30d?: number;
 }
 
 export interface Subscriber {
@@ -46,8 +48,11 @@ export interface Incident {
   reason: string;
   reasonPhrase: string;
   sheetStatus: "On Leave" | "Still Active";
+  lifecycleState: "detected" | "confirmed";
   receivedAt: string;
   message: string;
+  repeatCount: number;
+  reliabilityScore: number;
 }
 
 export interface RiskCook {
@@ -61,10 +66,18 @@ export interface RiskCook {
   action: string;
 }
 
+export interface ExplainableMatch {
+  cook: Cook;
+  score: number;
+  reasons: string[];
+}
+
 export interface Allocation {
   orderId: string;
   backupCookId: string | null;
   reason: string;
+  score?: number;
+  matchBreakdown?: string[];
 }
 
 export interface AuditEntry {
@@ -195,10 +208,48 @@ ORDERS.forEach(o => {
   todayBookingsMap[o.cookId] = (todayBookingsMap[o.cookId] || 0) + 1;
 });
 
+// 30-day dropout calculation map per cook
+const DROPOUT_STATUSES = new Set([
+  "cook no-show",
+  "cook no show",
+  "no show",
+  "cook_dropout",
+  "cancelled - cook unavailable",
+]);
+
+const cookDropoutCountMap: Record<string, { dropouts: number; revenue: number; totalOrders: number }> = {};
+const dailyDropoutMap: Record<string, number> = {};
+const dowDropoutMap: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+
+ALL_RAW_ORDERS.forEach(order => {
+  if (!cookDropoutCountMap[order.cookId]) {
+    cookDropoutCountMap[order.cookId] = { dropouts: 0, revenue: 0, totalOrders: 0 };
+  }
+  cookDropoutCountMap[order.cookId].totalOrders += 1;
+
+  const isDropout = order.status && DROPOUT_STATUSES.has(order.status);
+  if (isDropout) {
+    cookDropoutCountMap[order.cookId].dropouts += 1;
+    cookDropoutCountMap[order.cookId].revenue += Math.round(order.amount);
+
+    if (order.date) {
+      dailyDropoutMap[order.date] = (dailyDropoutMap[order.date] || 0) + 1;
+      const dObj = new Date(order.date);
+      if (!isNaN(dObj.getTime())) {
+        const day = dObj.getDay();
+        dowDropoutMap[day] += 1;
+      }
+    }
+  }
+});
+
 // 2. Parse all cooks (all 92)
 export const COOKS: Cook[] = rawCooks.map(rc => {
   const capacity = parseInt(rc.max_daily_orders, 10) || 30;
   const booked = todayBookingsMap[rc.cook_id] || 0;
+  const hist = cookDropoutCountMap[rc.cook_id] || { dropouts: 0, totalOrders: 1 };
+  const reliabilityScore = Math.max(50, Math.round(((hist.totalOrders - hist.dropouts) / hist.totalOrders) * 100));
+
   return {
     id: rc.cook_id,
     name: rc.cook_name,
@@ -210,6 +261,8 @@ export const COOKS: Cook[] = rawCooks.map(rc => {
     phone: normalizePhone(rc.phone),
     status: (rc.status || "active").toLowerCase().trim(),
     statusSince: normalizeDate(rc.status_since) || null,
+    reliabilityScore,
+    repeatDropouts30d: hist.dropouts,
   };
 });
 
@@ -231,31 +284,40 @@ export const SUBSCRIBERS: Subscriber[] = rawSubs.map(rs => {
   };
 });
 
-// 4. WhatsApp Incident signals
+// 4. WhatsApp Incident signals with Lifecycle & Repeat Context
 export const INCIDENTS: Incident[] = [
   {
     cookId: "CK086",
     reason: "Fever",
     reasonPhrase: "unwell with fever",
     sheetStatus: "On Leave",
+    lifecycleState: "confirmed",
     receivedAt: "06:52 AM",
     message: "Lakshmi aunty called. Fever, not cooking today. Updated sheet",
+    repeatCount: cookDropoutCountMap["CK086"]?.dropouts || 3,
+    reliabilityScore: 68,
   },
   {
     cookId: "CK087",
     reason: "Family function",
     reasonPhrase: "attending a family function in Mysore",
     sheetStatus: "On Leave",
+    lifecycleState: "confirmed",
     receivedAt: "07:05 AM",
     message: "Geeta Rao also out today, family function in Mysore. Updated sheet",
+    repeatCount: cookDropoutCountMap["CK087"]?.dropouts || 2,
+    reliabilityScore: 72,
   },
   {
     cookId: "CK090",
     reason: "Urgent village trip",
     reasonPhrase: "travelling urgently to village",
     sheetStatus: "Still Active",
+    lifecycleState: "detected",
     receivedAt: "07:41 AM",
     message: "Bhaiya aaj nahi ho payega, gaon jana pad raha hai urgent. Sorry 🙏 (Still active in sheet - Unactioned!)",
+    repeatCount: cookDropoutCountMap["CK090"]?.dropouts || 2,
+    reliabilityScore: 71,
   },
 ];
 
@@ -275,24 +337,11 @@ export const sub = (o: Order) => subMap.get(o.subscriberId) || {
 
 // ---------------- 30-Day Leadership Analytics ----------------
 
-const DROPOUT_STATUSES = new Set([
-  "cook no-show",
-  "cook no show",
-  "no show",
-  "cook_dropout",
-  "cancelled - cook unavailable",
-]);
-
-// Calculate real 30-day city statistics
 export const CITY_STATS: Record<City, { orders: number; dropouts: number; refunded: number }> = {
   Bengaluru: { orders: 0, dropouts: 0, refunded: 0 },
   Mumbai: { orders: 0, dropouts: 0, refunded: 0 },
   Pune: { orders: 0, dropouts: 0, refunded: 0 },
 };
-
-const cookDropoutCountMap: Record<string, { dropouts: number; revenue: number; totalOrders: number }> = {};
-const dailyDropoutMap: Record<string, number> = {};
-const dowDropoutMap: Record<number, number> = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
 
 ALL_RAW_ORDERS.forEach(order => {
   const c = cookMap.get(order.cookId);
@@ -300,27 +349,10 @@ ALL_RAW_ORDERS.forEach(order => {
 
   CITY_STATS[city].orders += 1;
 
-  if (!cookDropoutCountMap[order.cookId]) {
-    cookDropoutCountMap[order.cookId] = { dropouts: 0, revenue: 0, totalOrders: 0 };
-  }
-  cookDropoutCountMap[order.cookId].totalOrders += 1;
-
   const isDropout = order.status && DROPOUT_STATUSES.has(order.status);
   if (isDropout) {
     CITY_STATS[city].dropouts += 1;
     CITY_STATS[city].refunded += Math.round(order.amount);
-
-    cookDropoutCountMap[order.cookId].dropouts += 1;
-    cookDropoutCountMap[order.cookId].revenue += Math.round(order.amount);
-
-    if (order.date) {
-      dailyDropoutMap[order.date] = (dailyDropoutMap[order.date] || 0) + 1;
-      const dObj = new Date(order.date);
-      if (!isNaN(dObj.getTime())) {
-        const day = dObj.getDay();
-        dowDropoutMap[day] += 1;
-      }
-    }
   }
 });
 
@@ -381,10 +413,63 @@ export const INITIAL_AUDIT: AuditEntry[] = [
   { id: "A-1039", timestamp: "19 Sep, 09:45 AM", droppedCook: "Lakshmi Iyer (CK086)", affected: 9, reassignedTo: "CK001, CK003", refunds: 0, operator: "Arvind K.", status: "Completed" },
 ];
 
-// ---------------- Allocation Engine ----------------
+// ---------------- Explainable Allocation Engine ----------------
 
 export function remaining(cook: Cook, extra: Record<string, number>): number {
   return Math.max(0, cook.capacity - cook.booked - (extra[cook.id] ?? 0));
+}
+
+export function scoreCandidate(cook: Cook, subscriber: Subscriber, extra: Record<string, number>): ExplainableMatch {
+  let score = 40; // Base city match passed
+  const reasons: string[] = [`City: ${cook.city} ✓`];
+
+  // Diet verification
+  if (subscriber.diet === "Jain") {
+    if (cook.serves.includes("Jain")) {
+      score += 30;
+      reasons.push("Jain certified kitchen ✓");
+    }
+  } else if (subscriber.diet === "Non-Veg") {
+    if (cook.serves.includes("Non-Veg")) {
+      score += 30;
+      reasons.push("Non-Veg certified ✓");
+    }
+  } else {
+    score += 30;
+    reasons.push("Veg compatible ✓");
+  }
+
+  // Capacity buffer
+  const freeSlots = remaining(cook, extra);
+  if (freeSlots >= 5) {
+    score += 15;
+    reasons.push(`${freeSlots} spare slots available ✓`);
+  } else if (freeSlots > 0) {
+    score += 8;
+    reasons.push(`${freeSlots} spare slot(s) left`);
+  }
+
+  // Cuisine match
+  if (cook.specialty.toLowerCase().includes(subscriber.cuisine.toLowerCase())) {
+    score += 10;
+    reasons.push(`${subscriber.cuisine} cuisine preference match ✓`);
+  }
+
+  // Cook reliability
+  const rel = cook.reliabilityScore ?? 80;
+  if (rel >= 90) {
+    score += 5;
+    reasons.push(`High reliability: ${rel}%`);
+  } else if (rel < 75) {
+    score -= 10;
+    reasons.push(`Caution: ${rel}% reliability`);
+  }
+
+  return {
+    cook,
+    score: Math.min(99, Math.max(50, score)),
+    reasons,
+  };
 }
 
 export function eligibleBackups(dropped: Cook, diet: Diet, extra: Record<string, number>): Cook[] {
@@ -407,18 +492,67 @@ export function allocate(dropped: Cook, orders: Order[], extra: Record<string, n
     const s = sub(o);
     const pool = eligibleBackups(dropped, s.diet, used).filter(c => remaining(c, used) > 0);
     if (pool.length > 0) {
-      const c = pool[0];
-      used[c.id] = (used[c.id] ?? 0) + 1;
+      // Find highest explainable score candidate
+      const candidates = pool.map(c => scoreCandidate(c, s, used)).sort((a, b) => b.score - a.score);
+      const chosen = candidates[0];
+      used[chosen.cook.id] = (used[chosen.cook.id] ?? 0) + 1;
       result.push({
         orderId: o.id,
-        backupCookId: c.id,
-        reason: `${s.diet} match · ${dropped.city} · ${c.specialty}`,
+        backupCookId: chosen.cook.id,
+        reason: `${s.diet} match · ${dropped.city} · ${chosen.cook.specialty}`,
+        score: chosen.score,
+        matchBreakdown: chosen.reasons,
       });
     } else {
       result.push({
         orderId: o.id,
         backupCookId: null,
         reason: `No remaining ${s.diet} kitchen capacity in ${dropped.city}`,
+        score: 0,
+        matchBreakdown: [`City: ${dropped.city}`, `Diet: ${s.diet}`, `All nearby kitchens at max capacity`],
+      });
+    }
+  }
+
+  return { result, used };
+}
+
+/**
+ * Global Batch Allocation Solver
+ * Solves multiple simultaneous dropouts as one global knapsack problem
+ * avoiding queue-order bias.
+ */
+export function allocateBatch(allTargetOrders: Order[], extra: Record<string, number>) {
+  const used: Record<string, number> = { ...extra };
+  const rank: Record<Diet, number> = { Jain: 0, "Non-Veg": 1, Veg: 2 };
+  
+  // Globally sort all affected orders across all dropouts by scarcity
+  const sorted = [...allTargetOrders].sort((a, b) => rank[sub(a).diet] - rank[sub(b).diet]);
+  const result: Allocation[] = [];
+
+  for (const o of sorted) {
+    const s = sub(o);
+    const originalCook = cookById(o.cookId) || { id: o.cookId, city: s.city } as Cook;
+    const pool = eligibleBackups(originalCook, s.diet, used).filter(c => remaining(c, used) > 0);
+    
+    if (pool.length > 0) {
+      const candidates = pool.map(c => scoreCandidate(c, s, used)).sort((a, b) => b.score - a.score);
+      const chosen = candidates[0];
+      used[chosen.cook.id] = (used[chosen.cook.id] ?? 0) + 1;
+      result.push({
+        orderId: o.id,
+        backupCookId: chosen.cook.id,
+        reason: `[Batch Match] ${s.diet} · ${originalCook.city} · ${chosen.cook.name} (${chosen.score}%)`,
+        score: chosen.score,
+        matchBreakdown: chosen.reasons,
+      });
+    } else {
+      result.push({
+        orderId: o.id,
+        backupCookId: null,
+        reason: `No remaining ${s.diet} kitchen capacity in ${originalCook.city}`,
+        score: 0,
+        matchBreakdown: [`City: ${originalCook.city}`, `Diet: ${s.diet}`, `All kitchens at capacity`],
       });
     }
   }
